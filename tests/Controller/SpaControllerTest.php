@@ -4,7 +4,7 @@ namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class SpaController extends WebTestCase
+class SpaControllerTest extends WebTestCase
 {
     public function testSomething(): void
     {
