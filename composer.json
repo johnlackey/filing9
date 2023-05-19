@@ -46,6 +46,7 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "infection/infection": "^0.27.0",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "6.2.*",
         "symfony/css-selector": "6.2.*",
@@ -59,7 +60,8 @@
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "infection/extension-installer": true
         },
         "optimize-autoloader": true,
         "preferred-install": {
@@ -97,7 +99,8 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "test": "vendor/bin/phpunit --configuration phpunit.xml.dist"
+        "test": "vendor/bin/phpunit --configuration phpunit.xml.dist",
+        "infection": "vendor/bin/infection"
     },
     "conflict": {
         "symfony/symfony": "*"
