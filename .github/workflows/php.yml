@@ -18,7 +18,7 @@ jobs:
         image: mariadb
         env:
           MARIADB_RANDOM_ROOT_PASSWORD: yes
-          MARIADB_DATABASE: filing
+          MARIADB_DATABASE: filing_test
           MARIADB_USER: filing
           MARIADB_PASSWORD: "!ChangeMe!"
         ports:
