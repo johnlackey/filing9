@@ -101,7 +101,9 @@
             "@auto-scripts"
         ],
         "test": "vendor/bin/phpunit --configuration phpunit.xml.dist",
-        "infection": "vendor/bin/infection"
+        "infection": "vendor/bin/infection",
+        "create-schema": "bin/console --env=test doctrine:schema:create",
+        "load-fixtures": "bin/console --env=test doctrine:fixtures:load"
     },
     "conflict": {
         "symfony/symfony": "*"

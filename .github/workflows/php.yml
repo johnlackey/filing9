@@ -13,7 +13,16 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    services:
+      mariadb:
+        image: mariadb
+        env:
+          MARIADB_RANDOM_ROOT_PASSWORD: yes
+          MARIADB_DATABASE: filing
+          MARIADB_USER: filing
+          MARIADB_PASSWORD: "!ChangeMe!"
+        ports:
+          - 3306:3306
     steps:
     - uses: actions/checkout@v3
 
@@ -40,6 +49,12 @@ jobs:
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
+
+    - name: Setup database create schema
+      run: composer run-script create-schema
+
+    - name: Setup database load fixtures
+      run: composer run-script load-fixtures
 
     - name: Run test suite
       run: composer run-script test
