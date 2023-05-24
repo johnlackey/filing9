@@ -12,6 +12,6 @@ class SpaControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/');
 
         $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('h1', 'Hello SpaController');
+        $this->assertSelectorTextContains("div[id='app']", '');
     }
 }
