@@ -3,13 +3,16 @@
 namespace App\Tests\Repository;
 
 use App\Entity\Item;
+use App\Factory\ItemFactory;
 use App\Repository\ItemRepository;
 use Doctrine\ORM\EntityNotFoundException;
 use Doctrine\ORM\Exception\MissingIdentifierField;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Zenstruck\Foundry\Test\Factories;
 
 class ItemRepositoryTest extends KernelTestCase
 {
+    use Factories;
 
     /**
      * @var \Doctrine\ORM\EntityManager
@@ -27,6 +30,8 @@ class ItemRepositoryTest extends KernelTestCase
 
     public function testSearchByName()
     {
+        // $item_produced = ItemFactory::new()->create(['number' => 15]);
+        static::ensureKernelShutdown();
         $item = $this->entityManager
             ->getRepository(Item::class)
             ->findOneBy(['number' => 15])
@@ -67,13 +72,14 @@ class ItemRepositoryTest extends KernelTestCase
 
         // Compare it to the entity you created for this test
         self::assertEquals($originalEntity, $entityFromDatabase);
+        $this->entityManager->getRepository(Item::class)->remove($originalEntity, true);
     }
 
     public function testRemove()
     {
         // Create the entity
         $originalEntity = new Item();
-        $originalEntity->setNumber(17);
+        $originalEntity->setNumber(117);
         $originalEntity->setReview(new \DateTime('2023-05-23'));
         $this->entityManager->getRepository(Item::class)->save($originalEntity, true);
 
@@ -89,6 +95,7 @@ class ItemRepositoryTest extends KernelTestCase
         // Verify that the first entity still exists
         $entityFromDatabase = $this->entityManager->getRepository(Item::class)->find($originalEntity->getId());
         self::assertEquals($originalEntity, $entityFromDatabase);
+        $this->entityManager->getRepository(Item::class)->remove($originalEntity, true);
 
         // Verify that the second entity we just removed, can't be found
         $this->expectException(MissingIdentifierField::class);

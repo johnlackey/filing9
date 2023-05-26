@@ -21,9 +21,10 @@ class ItemController extends AbstractController
         $data = [];
 
         foreach ($items as $item) {
+            $locationName = $item->getLocation() ? $item->getLocation()->getName() : '';
             $data[] = [
                 'id' => $item->getId(),
-                'location' => $item->getLocation()->getName(),
+                'location' => $locationName,
                 'number' => $item->getNumber(),
             ];
         }
