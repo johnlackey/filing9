@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4463cffe06c1f424528a16e6a5545e7a",
+    "content-hash": "1b3c1ebf31c8233266ac153a1a16e38d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -9022,6 +9022,50 @@
             "time": "2022-02-21T01:04:05+00:00"
         },
         {
+            "name": "phplucidframe/console-table",
+            "version": "v1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phplucidframe/console-table.git",
+                "reference": "a973d911af96f3db42fca92cbeb1f473c9ad505e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phplucidframe/console-table/zipball/a973d911af96f3db42fca92cbeb1f473c9ad505e",
+                "reference": "a973d911af96f3db42fca92cbeb1f473c9ad505e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LucidFrame\\": "src/",
+                    "LucidFrameTest\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sithu K.",
+                    "email": "cithukyaw@gmail.com"
+                }
+            ],
+            "description": "Console Table",
+            "support": {
+                "issues": "https://github.com/phplucidframe/console-table/issues",
+                "source": "https://github.com/phplucidframe/console-table/tree/v1.2.4"
+            },
+            "time": "2019-03-03T12:17:32+00:00"
+        },
+        {
             "name": "phpspec/php-diff",
             "version": "v1.1.3",
             "source": {
@@ -9482,6 +9526,138 @@
                 }
             ],
             "time": "2023-05-11T05:14:45+00:00"
+        },
+        {
+            "name": "phrozenbyte/phpunit-array-asserts",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhrozenByte/phpunit-array-asserts.git",
+                "reference": "b0e0a2d58cef49db4c68bd620b4b22f74fc87f7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhrozenByte/phpunit-array-asserts/zipball/b0e0a2d58cef49db4c68bd620b4b22f74fc87f7d",
+                "reference": "b0e0a2d58cef49db4c68bd620b4b22f74fc87f7d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "phplucidframe/console-table": "^1.2",
+                "phrozenbyte/phpunit-throwable-asserts": "^1.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<8.0"
+            },
+            "require-dev": {
+                "incompass/coverage": "^1.0",
+                "mockery/mockery": "^1.3",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpunit/phpunit": "^8",
+                "psalm/plugin-mockery": "^0.7.0",
+                "psalm/plugin-phpunit": "^0.15.1",
+                "symfony/yaml": "^4.4",
+                "vimeo/psalm": "^4.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhrozenByte\\PHPUnitArrayAsserts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Rudolf",
+                    "homepage": "https://www.daniel-rudolf.de/"
+                }
+            ],
+            "description": "Provides various array-related PHPUnit assertions, primarily used for API testing.",
+            "keywords": [
+                "php",
+                "phpunit",
+                "phpunit-assertions",
+                "phpunit-extension"
+            ],
+            "support": {
+                "docs": "https://github.com/PhrozenByte/phpunit-array-asserts",
+                "issues": "https://github.com/PhrozenByte/phpunit-array-asserts/issues",
+                "source": "https://github.com/PhrozenByte/phpunit-array-asserts"
+            },
+            "time": "2021-02-27T14:54:32+00:00"
+        },
+        {
+            "name": "phrozenbyte/phpunit-throwable-asserts",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhrozenByte/phpunit-throwable-asserts.git",
+                "reference": "590235e19a51313e03ac4110523a6d257b4c9e0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhrozenByte/phpunit-throwable-asserts/zipball/590235e19a51313e03ac4110523a6d257b4c9e0a",
+                "reference": "590235e19a51313e03ac4110523a6d257b4c9e0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<8.0"
+            },
+            "require-dev": {
+                "incompass/coverage": "^1.0",
+                "mockery/mockery": "^1.3",
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpunit/phpunit": "^8",
+                "psalm/plugin-mockery": "^0.7.0",
+                "psalm/plugin-phpunit": "^0.15.1",
+                "symfony/yaml": "^4.4",
+                "vimeo/psalm": "^4.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhrozenByte\\PHPUnitThrowableAsserts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Rudolf",
+                    "homepage": "https://www.daniel-rudolf.de/"
+                }
+            ],
+            "description": "Provides various Throwable-related PHPUnit assertions.",
+            "keywords": [
+                "php",
+                "phpunit",
+                "phpunit-assertions",
+                "phpunit-extension"
+            ],
+            "support": {
+                "docs": "https://github.com/PhrozenByte/phpunit-throwable-asserts",
+                "issues": "https://github.com/PhrozenByte/phpunit-throwable-asserts/issues",
+                "source": "https://github.com/PhrozenByte/phpunit-throwable-asserts"
+            },
+            "time": "2021-02-15T17:40:06+00:00"
         },
         {
             "name": "sanmai/later",
