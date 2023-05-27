@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import axios from 'axios'
 
 function ItemShow () {
+  // eslint-disable-next-line no-unused-vars
   const [id, setId] = useState(useParams().id)
   const [item, setItem] = useState({ name: '', description: '' })
   useEffect(() => {

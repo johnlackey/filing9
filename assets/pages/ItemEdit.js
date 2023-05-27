@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 
 function ItemEdit () {
+  // eslint-disable-next-line no-unused-vars
   const [id, setId] = useState(useParams().id)
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
@@ -17,6 +18,7 @@ function ItemEdit () {
         setName(item.name)
         setDescription(item.description)
       })
+      // eslint-disable-next-line n/handle-callback-err
       .catch(function (error) {
         Swal.fire({
           icon: 'error',
@@ -42,10 +44,11 @@ function ItemEdit () {
         })
         setIsSaving(false)
       })
+      // eslint-disable-next-line n/handle-callback-err
       .catch(function (error) {
         Swal.fire({
           icon: 'error',
-          title: 'An Error Occured!',
+          title: 'An Error Occurred!',
           showConfirmButton: false,
           timer: 1500
         })

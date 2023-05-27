@@ -26,6 +26,7 @@ function ItemCreate () {
         setName('')
         setDescription('')
       })
+      // eslint-disable-next-line n/handle-callback-err
       .catch(function (error) {
         Swal.fire({
           icon: 'error',
