@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemList> renders ItemList 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="container"
+  >
+    <h2
+      className="text-center mt-5 mb-3"
+    >
+      Symfony Item Manager
+    </h2>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+      >
+        <a
+          className="btn btn-outline-primary"
+          href="/create"
+          onClick={[Function]}
+        >
+          Create New Item
+        </a>
+      </div>
+      <div
+        className="card-body"
+      >
+        <table
+          className="table table-bordered"
+        >
+          <thead>
+            <tr>
+              <th>
+                Location
+              </th>
+              <th>
+                Number
+              </th>
+              <th
+                width="240px"
+              >
+                Action
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;

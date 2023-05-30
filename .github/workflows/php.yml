@@ -61,3 +61,12 @@ jobs:
 
     - name: Run mutation testing
       run: composer run-script infection
+
+    - name: Run front end tests
+      run: yarn test
+
+    - name: Run front end mutation testing
+      run: yarn run stryker
+
+    - name: Lint front end
+      run: yarn run lint

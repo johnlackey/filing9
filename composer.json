@@ -46,16 +46,20 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "dama/doctrine-test-bundle": "^7.2",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "infection/infection": "^0.27.0",
+        "lchrusciel/api-test-case": "^5.2",
         "phpunit/phpunit": "^9.5",
+        "phrozenbyte/phpunit-array-asserts": "^1.2",
         "symfony/browser-kit": "6.2.*",
         "symfony/css-selector": "6.2.*",
         "symfony/debug-bundle": "6.2.*",
         "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^6.2",
         "symfony/stopwatch": "6.2.*",
-        "symfony/web-profiler-bundle": "6.2.*"
+        "symfony/web-profiler-bundle": "6.2.*",
+        "zenstruck/foundry": "^1.33"
     },
     "config": {
         "allow-plugins": {
@@ -65,6 +69,9 @@
             "infection/extension-installer": true
         },
         "optimize-autoloader": true,
+        "platform": {
+            "php": "8.1.2"
+        },
         "preferred-install": {
             "*": "dist"
         },

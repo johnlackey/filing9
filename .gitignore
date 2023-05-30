@@ -4,6 +4,8 @@
 /.env.local.php
 /.env.*.local
 /.idea
+/.pnp.cjs
+/.yarn
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
@@ -25,3 +27,5 @@ yarn-error.log
 
 infection.html
 infection.log
+mutation.html
+stryker.log

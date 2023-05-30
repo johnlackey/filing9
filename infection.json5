@@ -5,7 +5,8 @@
             "src/"
         ],
         "excludes": [
-            "DataFixtures"
+            "DataFixtures",
+            "Factory"
         ]
     },
     "logs": {
