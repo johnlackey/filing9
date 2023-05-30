@@ -28,3 +28,4 @@ yarn-error.log
 infection.html
 infection.log
 mutation.html
+stryker.log
